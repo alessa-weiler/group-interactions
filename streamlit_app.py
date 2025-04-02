@@ -22,11 +22,12 @@ number_of_people = int(number_of_people)
 names = []
 texts = []
 for i in range(number_of_people):
-    names[i]= st.text_input(f"Name of person {i + 1}", key=f"name_{i}")
-    texts[i]= st.text_input(f"Text of person {i + 1}", key=f"text_{i}")
+    name = st.text_input(f"Name of person {i + 1}", key=f"name_{i}")
+    text = st.text_input(f"Text of person {i + 1}", key=f"text_{i}")
+    
+    # Add the inputs to our lists
     names.append(name)
     texts.append(text)
-
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
